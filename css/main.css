@@ -24,3 +24,32 @@
 	display: block;
 	margin: 0 auto;
 }
+
+.border{
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-color: #2c3e50;
+    max-width: 250px;
+}
+
+h2{
+	font-size: 3em;
+	font-weight: 700;
+}
+
+p, a{
+	font-size: 1.5em;
+}
+
+#davian{
+	font-weight: 700;
+}
+
+#davianhome{
+	font-weight: 700;
+	font-size: 2em;
+}
+
+.navi{
+	font-weight: 700;
+}
