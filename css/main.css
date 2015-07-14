@@ -24,7 +24,8 @@ p, a{
 }
 
 .jumbotron .container{
-	padding-top: 50px;
+	padding-top: 100px;
+	padding-bottom: 15px;
 }
 
 .jumbotron .border {
@@ -98,4 +99,8 @@ p, a{
 	font-weight: 700;
 	font-size: 2em;
 	color: #ffffff;
+}
+
+#davianhome:hover{
+	color: #ff8c22;
 }
