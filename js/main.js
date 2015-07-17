@@ -1,35 +1,54 @@
 var main = function() {
 	
+
+
+
+	$(document).on("scroll", onScroll);
+
 	$('.menuitem').click(function(){
 		$('.menuitem').removeClass('active');
 		$(this).addClass('active');
 	});
 
-
-	//$(document).on("scroll", onScroll);
-/*
-	$('menuitem a[href^="#"]').on('click', function(e){
+	$('.menuitem a[href^="#"]').on('click', function(e){
 		e.preventDefault();
-		$('menuitem a').each(function(){
-			$('.menuitem').removeClass('active');
+		$(document).off("scroll");
+/*
+		$('.menuitem a').each(function(){
+			$(this).removeClass('active');
 		})
 		$(this).addClass('active');
+		*/
+
 
         var target = this.hash,
             menu = target;
         $target = $(target);
-
+/*
         $("html, body").stop().animate(
-        	{scrollTop: $target.offset().top}, 
+        	{scrollTop: $(target).offset().top}, 
+        	{
+        	duration: 1300,
+            easing: "easeInOutExpo"
+        	})
+        */
+        $("html, body").stop().animate(
+        	{scrollTop: $(target).offset().top}, 
         	1300,
             "easeInOutExpo",
             function(){
             	window.location.hash = target;
             	$(document).on("scroll", onScroll);
-            })		
-	})
+            });
+        
+	});
 
-	*/
+	
+	/*
+	$('.menuitem').click(function(){
+		$('.menuitem').removeClass('active');
+		$(this).addClass('active');
+	});
 
 	$("#click-about").click(function (e){
 		e.preventDefault();
@@ -74,7 +93,22 @@ var main = function() {
     $(window).bind("mousewheel", function() {
     	$("html, body").stop();
 	});
+	*/
 }
 
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.menuitem a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.menuitem').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
 
 $(document).ready(main);
