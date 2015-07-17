@@ -59,12 +59,17 @@ p, a{
 }
 
 .navbar-default .navbar-nav .active a {
-	color: #fff;
+	color: #fff; 
 	background-color: #1a242f;
 }
 
+.navbar-default .navbar-nav .active a:focus{
+	background-color: #1a242f;
+	color: #fff;
+}
+
 .navbar-default .navbar-nav .active a:hover{
-	background-color: transparent;
+	background-color: #1a242f;
 	color: #fff;
 }
 
@@ -122,3 +127,4 @@ p, a{
 	padding-top: 80px;
 	padding-bottom: 80px;
 }
+
