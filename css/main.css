@@ -63,6 +63,7 @@ p, a{
 	background-color: #1a242f;
 }
 
+
 .navbar-default .navbar-nav .active a:focus{
 	background-color: #1a242f;
 	color: #fff;
@@ -120,7 +121,17 @@ p, a{
 	padding-top: 80px;
 	padding-bottom: 80px;
 	color: #fff;
+	text-align: left;
 
+}
+
+#about a{
+	color: #2c3e50;
+	font-weight: 600;
+}
+
+#about li{
+	padding-left: 0;
 }
 
 #contact{

@@ -101,12 +101,14 @@ function onScroll(event){
     $('.menuitem a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        // console.log(currLink.parent(), currLink);
+        //if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        if (refElement.offset().top <= scrollPos){
             $('.menuitem').removeClass("active");
-            currLink.addClass("active");
+            currLink.closest('.menuitem').addClass("active");
         }
         else{
-            currLink.removeClass("active");
+            currLink.closest('.menuitem').removeClass("active");
         }
     });
 }
