@@ -20,7 +20,7 @@ var main = function() {
 			1300,
 			"easeInOutExpo",
 			function(){
-				window.location.hash = target;
+				//window.location.hash = target;
 			});
 
 	});
@@ -38,10 +38,9 @@ var main = function() {
         	1300,
             "easeInOutExpo",
             function(){
-            	window.location.hash = target;
+            	//window.location.hash = target;
             	$(document).on("scroll", onScroll);
             });
-        
 	});
 
 }
